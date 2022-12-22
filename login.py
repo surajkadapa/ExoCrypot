@@ -2,7 +2,7 @@
 from tkinter import *
 name = ""
 password = ""
-fl = open("/home/suraj/Documents/personal/ExoCrypot/credentials.txt")
+fl = open("credentials.txt") #the path problem should be taken care of
 cred = fl.read().split()
 user = cred[0]
 pasw = cred[1]
