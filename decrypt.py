@@ -1,0 +1,20 @@
+#decrypt page
+from tkinter import *
+root = Tk()
+root.title("ExoCrypt")
+root.geometry('950x700')
+root.resizable(False,False)
+root ['bg'] = "#322C2C"
+Font_tuple = ("Comic Sans MS", 25, "bold")
+heading = Label(root, bg="#322C2C", fg="#ffffff", text= "ExoCrypt", font=Font_tuple)
+heading.configure(justify="center")
+heading.place(x=400, y=10)
+back_button = Button(root, text="Back", command=root.destroy)
+back_button.place(x=0,y=0)
+enc_text = Text(root, height=20, width=50)
+enc_text.place(x=30, y=150)
+dec_text = Text(root, height=20, width=50)
+dec_text.place(x=500, y=150)
+dec_button = Button(root, text="Decrypt", height = 2, width = 6, command=root.destroy)
+dec_button.place(x=430,y=550)
+root.mainloop()
