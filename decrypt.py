@@ -1,7 +1,20 @@
 #decrypt page
 from tkinter import *
+import base64
+
+def get_txt():
+    INPUT = enc_text.get("1.0", "end-1c")
+    return decrypt(INPUT)
+
+def insert_txt():
+    dec_text.insert(END, get_txt())
+
+def decrypt(text):
+    return (base64.b64decode(text).decode('utf-8'))
+
+
 root = Tk()
-root.title("ExoCrypt")
+root.title("ExoCrypt-Decrypt")
 root.geometry('950x700')
 root.resizable(False,False)
 root ['bg'] = "#322C2C"
@@ -20,6 +33,6 @@ enc_text = Text(root, height=20, width=50)
 enc_text.place(x=30, y=150)
 dec_text = Text(root, height=20, width=50)
 dec_text.place(x=500, y=150)
-dec_button = Button(root, text="Decrypt", height = 2, width = 12, command=root.destroy)
+dec_button = Button(root, text="Decrypt", height = 2, width = 12, command=insert_txt)
 dec_button.place(x=410,y=550)
 root.mainloop()
