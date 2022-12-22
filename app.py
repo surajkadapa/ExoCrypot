@@ -1,15 +1,52 @@
-from tkinter import *
-#from tkinter.ttk import *
-root = Tk()
+import tkinter as tk
+m = tk.Tk()
+#322c2c
 
-root.title("ExoCrypt")
-root.geometry('950x700')
-root ['bg'] ='#322C2C'
-Font_tuple = ("Comic Sans MS", 32, "bold")
-heading = Label(root,  bg="#322C2C", fg="#ffffff", text = "ExoCrypt", font=Font_tuple)
-heading.configure(justify='center')
-heading.place(x=385,y=10)
-root.resizable(False,False)
-photo = PhotoImage(file=r"/home/suraj/Documents/random/gui")
+m.title('ExoCrypt')
+m.geometry('950x700')
+m['bg']='#322c2c'
+m.resizable(False,False)
 
-root.mainloop()
+#Decrypt Page
+
+def decry():
+    #m.destroy()
+    m2 = tk.Tk()
+    m2.title("ExoCrypt")
+    m2.geometry('950x700')
+    m2.resizable(False,False)
+    m2 ['bg'] = "#322C2C"
+    Font_tuple = ("Comic Sans MS", 25, "bold")
+    Font_tuple2 = ("Ubuntu",18)
+    heading = tk.Label(m2, bg="#322C2C", fg="#ffffff", text= "ExoCrypt", font=Font_tuple)
+    heading.configure(justify="center")
+    heading.place(x=400, y=20)
+    back_button = tk.Button(m2, text="Back", command=m2.destroy)
+    back_button.place(x=30,y=20)
+    enc_lbl=tk.Label(m2, bg="#322C2C", fg = "#ffffff", text="Encrypted Text", font=Font_tuple2)
+    enc_lbl.place(x=142,y=116)
+    dec_lbl=tk.Label(m2, bg="#322C2C", fg = "#ffffff", text="Decrypted Text", font=Font_tuple2)
+    dec_lbl.place(x=622,y=116)
+    enc_text = tk.Text(m2, height=20, width=50)
+    enc_text.place(x=30, y=150)
+    dec_text = tk.Text(m2, height=20, width=50)
+    dec_text.place(x=500, y=150)
+    dec_button = tk.Button(m2, text="Decrypt", height = 2, width = 6, command=m2.destroy)
+    dec_button.place(x=430,y=550)
+    m2.mainloop()
+
+#Exocrypt heading
+comic=("Comic Sans MS",32,"bold")
+head=tk.Label(m,bg='#322c2c',fg='#ffffff',text='ExoCrypt',font=comic)
+head.place(x=395, y=200)
+head.configure(justify='center')
+
+#Send Button
+send=tk.Button(m,text='Send', width = 40, command=m.destroy)
+send.place(x=80,y=350)
+
+#Decrypt Button
+decry=tk.Button(m,text='Decrypt', width = 40, command=decry)
+decry.place(x=505,y=350)
+
+m.mainloop()
