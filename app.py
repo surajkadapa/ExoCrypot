@@ -1,32 +1,44 @@
 import tkinter as tk
 from tkinter import * 
 import base64
-m = tk.Tk()
+m = Tk()
 #322c2c
 
 m.title('ExoCrypt')
 m.geometry('950x700')
 m['bg']='#322c2c'
 m.resizable(False,False)
-
+name = ""
+password = ""
+fl = open("/home/suraj/Documents/personal/ExoCrypot/credentials.txt") #the path problem should be taken care of
+cred = fl.read().split()
+user = cred[0]
+pasw = cred[1]
 #login page
 
 def login():
-    name = ""
-    password = ""
-    fl = open("credentials.txt") #the path problem should be taken care of
-    cred = fl.read().split()
-    user = cred[0]
-    pasw = cred[1]
+    global m
+    global user, pasw
+    #print(user,pasw)
+    m.destroy()
+    def my_show():
+        #print(c_v1.get())
+        if(c_v1.get()==1):
+            passw_entry.config(show='')
+        else:
+            passw_entry.config(show='*')
+
 
     def submit():
         global name, password
         name = name_var.get()
         password = passw_var.get()
+        #print(name, password)
         credentials(name, password)
 
     def credentials(guser, gpass):
         global user, pasw
+        #print(guser, gpass)
         if user == guser and gpass == pasw:
             msg.insert(END, "Success!")
         else:
@@ -45,8 +57,8 @@ def login():
     heading2 = tk.Label(root, bg="#322C2C", fg="#ffffff", text="Login", font=Font_tuple2)
     heading2.configure(justify=CENTER)
     heading2.place(x=435, y=50)
-    name_var = tk.StringVar()
-    passw_var = tk.StringVar()
+    name_var = tk.StringVar(root)
+    passw_var = tk.StringVar(root)
     name_disp = tk.Label(root, text='Username', bg="#322C2C", fg="#ffffff")
     name_disp.place(x=365, y=300)
     name_entry = tk.Entry(root, textvariable=name_var)
@@ -55,10 +67,13 @@ def login():
     passw_disp = tk.Label(root, text="Password", bg='#322C2C', fg="#ffffff")
     passw_disp.place(x=366, y=340)
     passw_entry.place(x=445, y=338)
+    c_v1=IntVar(root)
+    c1 = Checkbutton(root,text='Show Password',variable=c_v1,onvalue=1,offvalue=0,command=my_show)
+    c1.place(x=457, y=370)
     msg = tk.Text(root, height=1, width=50,bg="#322C2C",fg="#ffffff")
-    msg.place(x=300, y=420)
+    msg.place(x=300, y=440)
     sub_btn = tk.Button(root, text="Submit", command=submit)
-    sub_btn.place(x=460, y=380)
+    sub_btn.place(x=460, y=400)
     back_button = tk.Button(root, text="Back", command=root.destroy)
     back_button.place(x=0,y=0)
     root.mainloop()
@@ -76,7 +91,7 @@ def decry():
 
     def decrypt(text):
         return (base64.b64decode(text).decode('utf-8'))
-        
+
     m2 = tk.Tk()
     m2.title("ExoCrypt")
     m2.geometry('950x700')
