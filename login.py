@@ -2,10 +2,17 @@
 from tkinter import *
 name = ""
 password = ""
-fl = open("credentials.txt") #the path problem should be taken care of
+fl = open("/home/suraj/Documents/personal/ExoCrypot/credentials.txt") #the path problem should be taken care of
 cred = fl.read().split()
 user = cred[0]
 pasw = cred[1]
+
+def my_show():
+    if(c_v1.get()==1):
+        passw_entry.config(show='')
+    else:
+        passw_entry.config(show='*')
+
 
 def submit():
     global name, password
@@ -43,10 +50,13 @@ passw_entry = Entry(root, show ="*", textvariable=passw_var)
 passw_disp = Label(root, text="Password", bg='#322C2C', fg="#ffffff")
 passw_disp.place(x=366, y=340)
 passw_entry.place(x=445, y=338)
+c_v1=IntVar(value=0)
+c1 = Checkbutton(root,text='Show Password',variable=c_v1,onvalue=1,offvalue=0,command=my_show)
+c1.place(x=457, y=370)
 msg = Text(root, height=1, width=50,bg="#322C2C",fg="#ffffff")
-msg.place(x=300, y=420)
+msg.place(x=300, y=440)
 sub_btn = Button(root, text="Submit", command=submit)
-sub_btn.place(x=460, y=380)
+sub_btn.place(x=460, y=400)
 back_button = Button(root, text="Back", command=root.destroy)
 back_button.place(x=0,y=0)
 root.mainloop()
