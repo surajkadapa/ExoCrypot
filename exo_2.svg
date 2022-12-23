@@ -1,0 +1,19 @@
+<svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="170" height="170" fill="#322C2C"/>
+<path d="M29.3449 36.8095C29.0301 64.7677 40.1118 126.747 86.9575 151" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<path d="M29.3384 36.8095C44.7936 36.4797 79.6782 32.4561 88.0051 19" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<path d="M150.855 36.8095C151.204 64.7677 138.914 126.747 86.9575 151" stroke="white" stroke-width="5"/>
+<path d="M150.862 36.8095C134.303 36.4797 96.9268 32.4561 88.0051 19" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<path d="M41.915 47.2858C41.6631 69.3445 50.5286 118.246 88.0051 137.381" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<path d="M41.9098 47.2858C54.3292 47.0142 82.3614 43.7006 89.0527 32.6192" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<path d="M138.285 47.2858C138.56 69.3445 128.888 118.246 88.005 137.381" stroke="white" stroke-width="5"/>
+<path d="M138.291 47.2858C125.319 47.0142 96.0413 43.7006 89.0526 32.6192" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<line x1="65.3622" y1="67.6093" x2="65.3622" y2="102.809" stroke="white" stroke-width="5"/>
+<line x1="89.2647" y1="54.6832" x2="64.1218" y2="69.3499" stroke="white" stroke-width="5"/>
+<line x1="68.4241" y1="68.5919" x2="89.4067" y2="82.5803" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<line y1="-2.5" x2="29.108" y2="-2.5" transform="matrix(0.863779 0.503871 0.503871 -0.863779 88.005 52.5238)" stroke="white" stroke-width="5"/>
+<line y1="-2.5" x2="35.619" y2="-2.5" transform="matrix(0 1 1 0 113.148 67.1907)" stroke="white" stroke-width="5"/>
+<line x1="2.5" y1="-2.5" x2="27.718" y2="-2.5" transform="matrix(-0.83205 0.5547 0.5547 0.83205 113.148 69.2852)" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<line x1="64.9572" y1="100.309" x2="113.148" y2="100.309" stroke="white" stroke-width="5"/>
+<path d="M129.734 113.365C223.544 98.3349 -43.6718 15.1396 33.8517 77.0844" stroke="white" stroke-width="5"/>
+</svg>
