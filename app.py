@@ -10,16 +10,17 @@ m['bg']='#322c2c'
 m.resizable(False,False)
 name = ""
 password = ""
-fl = open("credentials.txt") #the path problem should be taken care of
+fl = open("/home/suraj/Documents/personal/ExoCrypot/credentials.txt") #the path problem should be taken care of
 cred = fl.read().split()
 user = cred[0]
 pasw = cred[1]
+
 #login page
 
 def login():
     global m
     global user, pasw
-    #print(user,pasw)
+    print(user,pasw)
     m.destroy()
     def my_show():
         #print(c_v1.get())
