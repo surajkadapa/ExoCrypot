@@ -120,15 +120,19 @@ def decry():
 #Exocrypt heading
 comic=("Comic Sans MS",32,"bold")
 head=tk.Label(m,bg='#322c2c',fg='#ffffff',text='ExoCrypt',font=comic)
-head.place(x=395, y=200)
+head.place(x=395, y=175)
 head.configure(justify='center')
+
+#logo
+logo = PhotoImage(file="/home/suraj/Documents/personal/ExoCrypot/exo_1.png")
+Label(image=logo,bg="#322C2C").place(x=385, y=230)
 
 #Send Button
 send=tk.Button(m,text='Send', width = 40, command=login)
-send.place(x=80,y=350)
+send.place(x=80,y=430)
 
 #Decrypt Button
 decry=tk.Button(m,text='Decrypt', width = 40, command=decry)
-decry.place(x=505,y=350)
+decry.place(x=505,y=430)
 
 m.mainloop()
