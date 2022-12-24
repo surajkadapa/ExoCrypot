@@ -135,4 +135,7 @@ send.place(x=80,y=430)
 decry=tk.Button(m,text='Decrypt', width = 40, command=decry)
 decry.place(x=505,y=430)
 
+credits = tk.Label(m, bg="#322C2C", fg="#ffffff", text="By").place(x=840, y=638)
+credits2 = tk.Label(m, bg="#322C2C", fg="#ffffff", text="Suraj, Justin, Ishaan").place(x=790, y=660)
+
 m.mainloop()
