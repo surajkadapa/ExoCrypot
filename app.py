@@ -124,7 +124,7 @@ head.place(x=395, y=175)
 head.configure(justify='center')
 
 #logo
-logo = PhotoImage(file="/home/suraj/Documents/personal/ExoCrypot/exo_1.png")
+logo = PhotoImage(file="exo_1.png")
 Label(image=logo,bg="#322C2C").place(x=385, y=230)
 
 #Send Button
