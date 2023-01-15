@@ -5,7 +5,7 @@ import traceback, mailparser
 from bs4 import BeautifulSoup
 from tkinter import *
 frm_email = "testpython333@gmail.com"
-frm_pwd = "wkpltoxkaklffbpm"
+frm_pwd = "#######"
 smtp_server = "imap.gmail.com"
 smtp_port = 993
 msg = ""
