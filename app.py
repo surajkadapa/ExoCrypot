@@ -3,7 +3,7 @@ from tkinter import *
 import base64
 import email, smtplib, ssl
 sender_email = "testpython333@gmail.com"
-passwrd = "wkpltoxkaklffbpm"
+passwrd = "#######"
 send_addr = ""
 body = ""
 m = Tk()
